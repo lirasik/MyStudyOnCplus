@@ -1,10 +1,3 @@
-//
-//  main.cpp
-//  ShitchOne
-//
-//  Created by Antons Averins on 01/12/2022.
-//
-
 #include <iostream>
 using namespace std;
 
