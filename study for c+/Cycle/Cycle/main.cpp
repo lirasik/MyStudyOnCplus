@@ -3,22 +3,32 @@ using namespace std;
 
 int main()
 {
-
     setlocale(LC_ALL, "ru");
     
-    int a = 0;
+    int sum = 0;
     
-    while (a<7) // цыкл
+    int rangeBegin, rangeEnd;
+    
+    cout << "Дайте мне пожалуйста начало и конец диапозона: " << endl;
+    cin >> rangeBegin >> rangeEnd;
+    
+    /*
+    cout << "Дайте мне пожалуйста начало диапозона: " << endl;
+    cin >> rangeBegin;
+    
+    cout << "Дайте мне пожалуйста конец диапозона: " << endl;
+    cin >> rangeEnd;
+    */
+    
+    do
     {
-        cout << "Сообщение пришло: " << a << " раз" << endl;
-        a++;
-    }
+        if(rangeBegin % 2 != 0)
+        {
+            sum += rangeBegin;
+        }
+        
+        rangeBegin++;
+    } while (rangeBegin < rangeEnd);
     
-    if (a)
-    {
-        cout << "Мы напичатали это сообщение "<< a << " раз" << endl;
-    }
-    
-    // cout << "Text on your screen" << endl;
-    
+    cout << "Сумма всех целых нечётных чисел в указанном диапазоне = " << sum << endl;
 }
